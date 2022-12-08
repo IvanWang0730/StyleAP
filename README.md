@@ -11,6 +11,14 @@ Code and Data for Paper [Controlling Style in Neural Machine Translation via Pro
 - [torch 1.13.0](https://pytorch.org/)
 - faiss-gpu 1.7.2
 
+**NOTE**: At the very beginning, install NeurST from source:
+```
+git clone https://github.com/IvanWang0730/PZL.git
+cd neurst/
+pip3 install -e .
+```
+If there exists ImportError during running, manually install the required packages at that time.
+
 ## Quick Start
 ### Datasets
 Our experiments are implemented on MSMT with four language directions, i.e., en-zh, zh-en, en-ko, and en-pt. You can download the raw dataset used in our paper on [Google Drive](https://drive.google.com/drive/folders/17N2o0nc5i6aDNsHOQAoAbqbtVuPeaR4i?usp=share_link). It includes training, evaluation and innovated test sets as is depicted in our paper.
