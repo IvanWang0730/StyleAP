@@ -14,3 +14,4 @@ mecab-python3
 ipadic
 tensorflow_addons
 torch
+faiss-gpu
