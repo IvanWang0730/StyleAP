@@ -27,10 +27,11 @@ Our experiments are implemented on MSMT with four language directions, i.e., en-
 We take en2zh task as an example to show how it works.
 ```shell
 # generate faiss index
-bash scripts/generate_index.sh 0 wmt2021_en_zh.json trained_en_zh.index
-# search nearest samples from index
-bash scripts/search_index.sh 0 wmt2021_en_zh.json trained_en_zh.index 
+bash scripts/generate_index.sh 0 wmt2021_en_zh.en trained_en_zh.index
+# search nearest samples via index
+bash scripts/search_index.sh 0 wmt2021_en_zh.en trained_en_zh.index 
 ```
+In this instance, we use `wmt2021_en_zh.en` in the default file directory `./MSMT/` to train a faiss index on a single GPU 0 and the same file to search the nearest monolingual sentences via the above trained index. **note**: You may use the `scripts/split_parallel_sentence.sh` to obtain monolingual sentence files.
 
 ### Training & Validating
 We can directly use the yaml-style configuration files to train and evaluate a transformer model on [neurst](https://github.com/bytedance/neurst).
