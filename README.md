@@ -89,4 +89,4 @@ Please kindly cite our paper if this paper and the codes are helpful.
 
 ## Thanks
 
-Many thanks to the GitHub repositories of [Transformers](https://github.com/huggingface/transformers), [Neurst](https://github.com/bytedance/neurst) and [faiss](https://github.com/facebookresearch/faiss). Part of our codes are modified based on their codes.
+Many thanks to the GitHub repositories of [Transformers](https://github.com/huggingface/transformers), [Neurst](https://github.com/bytedance/neurst) and [Faiss](https://github.com/facebookresearch/faiss). Part of our codes are modified based on their codes.
