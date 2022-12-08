@@ -1,7 +1,22 @@
 from tqdm import tqdm
+import argparse
+
+
+def parse_opt():
+    parser = argparse.ArgumentParser()
+    
+    parser.add_argument('--file_path', type=str, default="", help="the location of file")
+    parser.add_argument('--src_path', type=str, default="", help="the output location of src file")
+    parser.add_argument('--trg_path', type=str, default="", help="the output location of trg file")
+    
+    args = parser.parse_args()
+    return args
+
 
 if __name__ == '__main__':
-    with open("wmt2021_en_zh.json", "r") as f, open("wmt2021_en_zh.en", "w") as fen, open("wmt2021_en_zh.zh", "w") as fzh:
+    args = parse_opt()
+    file_path, src_path, trg_path = args["file_path"], args["src_path"], args["trg_path"]
+    with open(file_path, "r") as f, open(src_path, "w") as fen, open(trg_path, "w") as fzh:
         for line in tqdm(f):
             dic = eval(line.strip(),{"false":False,"true":True})
             assert dic["src_lang"]=="zh"
