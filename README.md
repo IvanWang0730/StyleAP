@@ -9,9 +9,9 @@ Code and Data for Paper [Controlling Style in Neural Machine Translation via Pro
 - [neurst](https://github.com/bytedance/neurst)
 - [sacremoses](https://github.com/alvations/sacremoses)
 - [subword-nmt](https://github.com/rsennrich/subword-nmt)
-- [huggingface transformer 4.25.1](https://github.com/huggingface/transformers)
-- [torch 1.13.0](https://pytorch.org/)
-- faiss-gpu 1.7.2
+- [huggingface transformer](https://github.com/huggingface/transformers) 4.25.1
+- [torch](https://pytorch.org/) 1.13.0
+- [faiss-gpu](https://github.com/facebookresearch/faiss) 1.7.2
 
 **NOTE**: At the very beginning, install NeurST from source:
 ```
@@ -89,4 +89,4 @@ Please kindly cite our paper if this paper and the codes are helpful.
 
 ## Thanks
 
-Many thanks to the GitHub repositories of [Transformers](https://github.com/huggingface/transformers), [Neurst](https://github.com/bytedance/neurst) and [Lightseq](https://github.com/bytedance/lightseq). Part of our codes are modified based on their codes.
+Many thanks to the GitHub repositories of [Transformers](https://github.com/huggingface/transformers), [Neurst](https://github.com/bytedance/neurst) and [faiss](https://github.com/facebookresearch/faiss). Part of our codes are modified based on their codes.
