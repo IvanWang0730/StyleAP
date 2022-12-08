@@ -31,6 +31,10 @@ Our experiments are implemented on MSMT with four language directions, i.e., en-
 | Parallel               |        9.12M       |        9.12M       |        271K          |        412K         |
 | Development            |        1,997       |        2,000       |        879           |        890          | 
 | Test                   |        1,200       |        1,182       |        1,191         |        857          |
+- **Classical and Modern**. Classical Chinese originated from thousands of years ago and was used in ancient China. Modern Chinese is the normal Chinese that is commonly used currently.
+- **Early Modern and Modern**. Early Modern English in this paper refers to English used in the Renaissance such as Shakespearean plays. Modern English is the normal English that is commonly used currently.
+- **Honorific and Non-honorific**. There are seven verb paradigms or levels of verbs in Korean, each with its own unique set of verb endings used to denote the formality of a situation. We simplify the classification and roughly divide them into two groups.
+- **European and Brazilian**. European Portuguese is mostly used in Portugal. Brazilian Portuguese is mostly used in Brazil.
 
 ### Create Prompt-based Data
 We take en2zh task as an example to show how it works.
