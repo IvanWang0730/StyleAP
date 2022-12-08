@@ -5,7 +5,7 @@ Code and Data for Paper [Controlling Style in Neural Machine Translation via Pro
 <img src="method.pdf" width="350">
 </p>
 
-## Requirements:
+## Requirements
 - [neurst](https://github.com/bytedance/neurst)
 - [huggingface transformer 4.25.1](https://github.com/huggingface/transformers)
 - [torch 1.13.0](https://pytorch.org/)
