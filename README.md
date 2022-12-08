@@ -28,3 +28,10 @@ python3 -m neurst.cli.run_exp \
     --hparams_set transformer_base \
     --model_dir /models/benchmark_base
 ```
+
+### Evaluation on Testset
+```shell
+python3 -m neurst.cli.run_exp \
+    --config_paths configs/prediction_args.yml \
+    --model_dir configs/benchmark_base/best_avg
+```
