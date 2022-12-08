@@ -14,3 +14,9 @@ Code and Data for Paper [Controlling Style in Neural Machine Translation via Pro
 ## Quick Start
 ### Datasets
 Our experiments are implemented on MSMT with four language directions, i.e., en-zh, zh-en, en-ko, and en-pt. You can download the raw dataset used in our paper on [Google Drive](https://drive.google.com/drive/folders/17N2o0nc5i6aDNsHOQAoAbqbtVuPeaR4i?usp=share_link). It includes training, evaluation and innovated test sets as is depicted in our paper.
+
+### Create Prompt-based Data
+```shell
+bash scripts/generate_index.sh
+bash scripts/search_index.sh
+```
