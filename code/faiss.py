@@ -9,8 +9,7 @@ def parse_opt():
     
     parser.add_argument('--mode', type=str, default="", choices=['train', 'test'], help="")
     parser.add_argument('--file_dir', type=str, default="", help="the location of file")
-    parser.add_argument('--train', type=str, default="", help="the train set name")
-    parser.add_argument('--test', type=str, default="", help="the test set name")
+    parser.add_argument('--dataset', type=str, default="", help="the train/test set name")
     parser.add_argument('--index_path', type=str, default="trained_index", help="the test set name")
     
     args = parser.parse_args()
@@ -51,7 +50,7 @@ if __name__ == '__main__':
     file_dir = args["file_dir"]
     
     if args["mode"] == "train":
-        xb = embed(args["{file_dir}/train"]).astype("float32")
+        xb = embed(args["{file_dir}/dataset"]).astype("float32")
         print("hidden size:", xb.shape)
 
         # dim, measure = 768, faiss.METRIC_L2
@@ -69,7 +68,7 @@ if __name__ == '__main__':
     
     elif args["mode"] == "test":
         index = faiss.read_index(args["index_path"])
-        xq = embed(args["{file_dir}/test"]).astype("float32")
+        xq = embed(args["{file_dir}/dataset"]).astype("float32")
         
         gpu_num = faiss.get_num_gpus()
         if use_gpu and gpu_num > 0:
