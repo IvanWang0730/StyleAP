@@ -24,9 +24,12 @@ If there exists ImportError during running, manually install the required packag
 Our experiments are implemented on MSMT with four language directions, i.e., en-zh, zh-en, en-ko, and en-pt. You can download the raw dataset used in our paper on [Google Drive](https://drive.google.com/drive/folders/17N2o0nc5i6aDNsHOQAoAbqbtVuPeaR4i?usp=share_link). It includes training, evaluation and innovated test sets as is depicted in our paper.
 
 ### Create Prompt-based Data
+We take en2zh task as an example to show how it works.
 ```shell
-bash scripts/generate_index.sh
-bash scripts/search_index.sh
+# generate faiss index
+bash scripts/generate_index.sh 0 wmt2021_en_zh.json trained_en_zh.index
+# search nearest samples from index
+bash scripts/search_index.sh 0 wmt2021_en_zh.json trained_en_zh.index 
 ```
 
 ### Training & Validating
