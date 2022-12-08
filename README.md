@@ -5,6 +5,10 @@ Code and Data for Paper [Controlling Style in Neural Machine Translation via Pro
 <img src="method.pdf" width="350">
 </p>
 
+<p align="center">
+<img src="https://github.com/IvanWang0730/PZL/blob/main/method.png" width="350">
+</p>
+
 ## Requirements:
 - [neurst](https://github.com/bytedance/neurst)
 - [huggingface transformer 4.25.1](https://github.com/huggingface/transformers)
