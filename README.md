@@ -7,6 +7,8 @@ Code and Data for Paper [Controlling Style in Neural Machine Translation via Pro
 
 ## Requirements
 - [neurst](https://github.com/bytedance/neurst)
+- [sacremoses](https://github.com/alvations/sacremoses)
+- [subword-nmt](https://github.com/rsennrich/subword-nmt)
 - [huggingface transformer 4.25.1](https://github.com/huggingface/transformers)
 - [torch 1.13.0](https://pytorch.org/)
 - faiss-gpu 1.7.2
@@ -45,6 +47,12 @@ bash scripts/generate_index.sh 0 wmt2021_en_zh.en trained_en_zh.index
 bash scripts/search_index.sh 0 wmt2021_en_zh.en trained_en_zh.index 
 ```
 In this instance, we use `wmt2021_en_zh.en` in the default file directory `./MSMT/` to train a faiss index on a single GPU 0 and the same file to search the nearest monolingual sentences via the above trained index. **note**: You may use the `scripts/split_parallel_sentence.sh` to obtain monolingual sentence files.
+You can quickly prepossess the training data like this. You can check [sacremoses](https://github.com/alvations/sacremoses) and [subword-nmt](https://github.com/rsennrich/subword-nmt) for other setting details.
+```shell
+sacremoses -l {src_lang} -j 4 tokenize  < {src_text} > {src_text}.tok
+sacremoses -l {trg_lang} -j 4 tokenize  < {trg_text} > {trg_text}.tok
+subword-nmt learn-joint-bpe-and-vocab --input {train_file}.L1 {train_file}.L2 -s {num_operations} -o {codes_file} --write-vocabulary {vocab_file}.L1 {vocab_file}.L2
+```
 
 ### Training & Validating
 We can directly use the yaml-style configuration files to train and evaluate a transformer model on [neurst](https://github.com/bytedance/neurst).
