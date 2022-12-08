@@ -20,3 +20,11 @@ Our experiments are implemented on MSMT with four language directions, i.e., en-
 bash scripts/generate_index.sh
 bash scripts/search_index.sh
 ```
+
+### Training & Validating
+```shell
+python3 -m neurst.cli.run_exp \
+    --config_paths configs/training_args.yml,configs/translation_bpe.yml,configs/validation_args.yml \
+    --hparams_set transformer_base \
+    --model_dir /models/benchmark_base
+```
