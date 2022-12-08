@@ -55,12 +55,11 @@ BLEU scores will be reported on MSMT testset.
 ## Citation
 
 ```
-@inproceedings{2022-PZL,
+@article{2022-PZL,
     title = "Controlling Style in Neural Machine Translation via Prompt-based Zero-shot Learning",
     author = "",
     year = "2022",
-    address = "Online",
-    publisher = "ArXiv",
+    journal = "arXiv",
 }
 ```
 
