@@ -23,6 +23,15 @@ If there exists ImportError during running, manually install the required packag
 ### Datasets
 Our experiments are implemented on MSMT with four language directions, i.e., en-zh, zh-en, en-ko, and en-pt. You can download the raw dataset used in our paper on [Google Drive](https://drive.google.com/drive/folders/17N2o0nc5i6aDNsHOQAoAbqbtVuPeaR4i?usp=share_link). It includes training, evaluation and innovated test sets as is depicted in our paper.
 
+#### Multi-way Stylized Machine Translation(MSMT) Benchmark
+|                        | en-zh              | zh-en              | en-ko                | en-pt               |
+|------------------------|--------------------|--------------------|----------------------|---------------------|
+| Styles                 | Modern / Classical | Modern / Early     | Honorific / Non-hono | Eurpean / Brazilian |
+| Monolingual            |  22M /     967K    |  22M /   83.2K     |  20.5K /     20.5K   |  168K /    234K     |
+| Parallel               |        9.12M       |        9.12M       |        271K          |        412K         |
+| Development            |        1,997       |        2,000       |        879           |        890          | 
+| Test                   |        1,200       |        1,182       |        1,191         |        857          |
+
 ### Create Prompt-based Data
 We take en2zh task as an example to show how it works.
 ```shell
