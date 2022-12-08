@@ -18,12 +18,12 @@ def parse_opt():
 
 
 def batch_control(src_texts, batch=1024):
-        res = [[]]
-        for src_text in src_texts:
-            if len(res[-1]) == batch:
-                res.append([])
-            res[-1].append(src_text)
-        return res
+    res = [[]]
+    for src_text in src_texts:
+        if len(res[-1]) == batch:
+            res.append([])
+        res[-1].append(src_text)
+    return res
     
     
 def embed(text_path):
