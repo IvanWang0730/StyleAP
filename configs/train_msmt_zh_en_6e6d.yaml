@@ -4,12 +4,12 @@ task.params:
   src_data_pipeline.params:
     subtokenizer: bpe
     subtokenizer_codes: /MSMT/zh_en/codes.bpe
-    vocab_path: /MSMT/en_zh/vocab.en
+    vocab_path: /MSMT/zh_en/vocab.en
   trg_data_pipeline.class: TextDataPipeline
   trg_data_pipeline.params:
     subtokenizer: bpe
     subtokenizer_codes: /MSMT/zh_en/codes.bpe
-    vocab_path: /MSMT/en_zh/vocab.zh
+    vocab_path: /MSMT/zh_en/vocab.zh
   batch_size_per_gpu: 8192
   batch_by_tokens: true
   max_src_len: 256
