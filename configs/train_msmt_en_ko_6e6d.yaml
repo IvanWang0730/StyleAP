@@ -1,0 +1,68 @@
+task.class: Translation
+task.params:
+  src_data_pipeline.class: TEXTDataPipeline
+  src_data_pipeline.params:
+    subtokenizer: bpe
+    subtokenizer_codes: /MSMT/en_ko/codes.bpe
+    vocab_path: /MSMT/en_zh/vocab.en
+  trg_data_pipeline.class: TextDataPipeline
+  trg_data_pipeline.params:
+    subtokenizer: bpe
+    subtokenizer_codes: /MSMT/en_ko/codes.bpe
+    vocab_path: /MSMT/en_zh/vocab.zh
+  batch_size_per_gpu: 4098
+  batch_by_tokens: true
+  max_src_len: 256
+  max_trg_len: 256
+
+entry.class: trainer
+entry.params:
+  train_steps: 300000
+  summary_steps: 200
+  save_checkpoint_steps: 1000
+  criterion.class: label_smoothed_cross_entropy
+  criterion.params:
+    label_smoothing: 0.1
+
+validator.class: SeqGenerationValidator
+validator.params:
+  eval_dataset: ParallelTextDataset
+  eval_dataset.params:
+    src_file: DEV_SRC
+    trg_file: DEV_TRG
+  eval_batch_size: 64
+  eval_start_at: 5000
+  eval_steps: 1000
+  eval_criterion: label_smoothed_cross_entropy
+  eval_search_method: beam_search
+  eval_search_method.params:
+    beam_size: 4
+    length_penalty: 0.6
+    maximum_decode_length: 160
+    extra_decode_length: 50
+  eval_metric: bleu
+  eval_top_checkpoints_to_keep: 10
+  eval_auto_average_checkpoints: True
+
+entry: predict
+batch_size: 64
+search_method: beam_search
+search_method.params:
+  beam_size: 4
+  length_penalty: 0.6
+  maximum_decode_length: 160
+metric: bleu
+
+dataset.class: MultipleDataset
+dataset.params:
+  multiple_datasets:
+    dev:
+      dataset.class: ParallelTextDataset
+      dataset.params:
+        src_file: DEV_SRC
+        trg_file: DEV_TRG
+    test:
+      dataset.class: ParallelTextDataset
+      dataset.params:
+        src_file: TEST_SRC
+        trg_file: TEST_TRG
