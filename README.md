@@ -50,8 +50,10 @@ In this instance, we use `wmt2021_en_zh.en` in the default file directory `./MSM
 
 You can quickly prepossess the training data like this. Besides, check [sacremoses](https://github.com/alvations/sacremoses) and [subword-nmt](https://github.com/rsennrich/subword-nmt) for other setting details.
 ```shell
+# tokenize source and target sentences
 sacremoses -l {src_lang} -j 4 tokenize  < {src_text} > {src_text}.tok
 sacremoses -l {trg_lang} -j 4 tokenize  < {trg_text} > {trg_text}.tok
+# learn bpe subword
 subword-nmt learn-joint-bpe-and-vocab --input {train_file}.L1 {train_file}.L2 -s {num_operations} -o {codes_file} --write-vocabulary {vocab_file}.L1 {vocab_file}.L2
 ```
 
