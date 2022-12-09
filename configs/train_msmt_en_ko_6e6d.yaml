@@ -10,7 +10,7 @@ task.params:
     subtokenizer: bpe
     subtokenizer_codes: /MSMT/en_ko/codes.bpe
     vocab_path: /MSMT/en_zh/vocab.zh
-  batch_size_per_gpu: 4098
+  batch_size_per_gpu: 4096
   batch_by_tokens: true
   max_src_len: 256
   max_trg_len: 256
