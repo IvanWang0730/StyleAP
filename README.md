@@ -1,5 +1,5 @@
 # Controlling Styles in Neural Machine Translation with Activation Prompt
-Code and Data for Paper [Controlling Styles in Neural Machine Translation with Activation Prompt](https://translate.volcengine.com/), this paper proposes 1) a dataset **m**ultiway **s**tylized **m**achine **t**ranslation (**MSMT**) benchmark, including four language directions with diverse language styles. 2) a method named **style** **a**ctivation **p**rompt (**styleAP**) method to avoid re-tuning time after time. Through automatic evaluation and human evaluation, our method achieves a re-markable improvement over baselines and other methods. A series of analysis also show the advantages of our method.
+Code and Data for Paper [Controlling Styles in Neural Machine Translation with Activation Prompt](https://translate.volcengine.com/), this paper proposes 1) a dataset **m**ultiway **s**tylized **m**achine **t**ranslation (**MSMT**) benchmark, including four language directions with diverse language styles. 2) a method named **style** **a**ctivation **p**rompt (**StyleAP**) method to avoid re-tuning time after time. Through automatic evaluation and human evaluation, our method achieves a re-markable improvement over baselines and other methods. A series of analysis also show the advantages of our method.
 
 <p align="center">
 <img src="method.pdf" width="350">
@@ -15,7 +15,7 @@ Code and Data for Paper [Controlling Styles in Neural Machine Translation with A
 
 **NOTE**: At the very beginning, install NeurST from source:
 ```
-git clone https://github.com/IvanWang0730/styleAP.git
+git clone https://github.com/IvanWang0730/StyleAP.git
 cd neurst/
 pip3 install -e .
 ```
