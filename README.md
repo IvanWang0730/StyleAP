@@ -81,7 +81,7 @@ BLEU scores will be reported on MSMT testset.
 ```
 @article{2022-styleAP,
     title = "Controlling Styles in Neural Machine Translation with Activation Prompt",
-    author = "Yifan Wang, Zewei Sun, Shanbo Cheng, Weiguo Zheng, Mingxuan Wang",
+    author = "Yifan Wang and Zewei Sun and Shanbo Cheng and Weiguo Zheng and Mingxuan Wang",
     year = "2022",
     journal = "arXiv preprint arXiv:2212.08909",
     url = "https://arxiv.org/abs/2212.08909"
