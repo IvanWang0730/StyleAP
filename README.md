@@ -1,5 +1,5 @@
 # Controlling Styles in Neural Machine Translation with Activation Prompt
-Code and Data for Paper [Controlling Styles in Neural Machine Translation with Activation Prompt](https://translate.volcengine.com/), this paper proposes 1) a dataset **m**ultiway **s**tylized **m**achine **t**ranslation (**MSMT**) benchmark, including four language directions with diverse language styles. 2) a method named **style** **a**ctivation **p**rompt (**StyleAP**) method to avoid re-tuning time after time. Through automatic evaluation and human evaluation, our method achieves a re-markable improvement over baselines and other methods. A series of analysis also show the advantages of our method.
+Code and Data for Paper [Controlling Styles in Neural Machine Translation with Activation Prompt](https://arxiv.org/abs/2212.08909), this paper proposes 1) a dataset **m**ultiway **s**tylized **m**achine **t**ranslation (**MSMT**) benchmark, including four language directions with diverse language styles. 2) a method named **style** **a**ctivation **p**rompt (**StyleAP**) method to avoid re-tuning time after time. Through automatic evaluation and human evaluation, our method achieves a re-markable improvement over baselines and other methods. A series of analysis also show the advantages of our method.
 
 <p align="center">
 <img src="method.pdf" width="350">
@@ -81,9 +81,10 @@ BLEU scores will be reported on MSMT testset.
 ```
 @article{2022-styleAP,
     title = "Controlling Styles in Neural Machine Translation with Activation Prompt",
-    author = "",
+    author = "Yifan Wang, Zewei Sun, Shanbo Cheng, Weiguo Zheng, Mingxuan Wang",
     year = "2022",
-    journal = "arXiv",
+    journal = "arXiv preprint arXiv:2212.08909",
+    url = "https://arxiv.org/abs/2212.08909"
 }
 ```
 
